@@ -173,7 +173,7 @@ The dashboard was built in Tableau to provide interactive business insights into
 
 ### Dashboard Preview
 
-![Dashboard](Images/dashboard.png)
+![Dashboard](dashboard.png)
 
    - **Documentation**: Keep clear notes of each query's objective, approach, and results.
 
