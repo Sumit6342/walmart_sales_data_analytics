@@ -31,13 +31,14 @@ The project focuses on identifying sales trends, customer behavior, payment pref
 
 ## 📊 Dashboard Preview
 
-The interactive Tableau dashboard provides a comprehensive overview of Walmart sales performance through KPIs, sales trends, branch performance, city-wise analysis, and payment method distribution.
+The interactive Tableau dashboard provides a comprehensive overview of Walmart sales performance.
 
 <p align="center">
   <img src="Dashboard/dashboard.png" alt="Walmart Sales Dashboard" width="100%">
 </p>
 
-> **Note:** The interactive Tableau Public dashboard link will be added after publishing.
+> 📌 **Tableau Public dashboard link will be added after publishing.**
+
 
 ## ⭐ Project Highlights
 
@@ -53,19 +54,14 @@ The interactive Tableau dashboard provides a comprehensive overview of Walmart s
   
 ## 🛠 Tech Stack
 
-Python
-
-Pandas
-
-NumPy
-
-MySQL
-
-Tableau
-
-Git & GitHub
-
-Jupyter Notebook
+| Category | Tools |
+|----------|-------|
+| Programming | Python |
+| Data Analysis | Pandas, NumPy |
+| Database | MySQL |
+| Visualization | Tableau |
+| Version Control | Git & GitHub |
+| Notebook | Jupyter Notebook |
 
 ## 📁 Dataset
 
@@ -381,8 +377,10 @@ pip install -r requirements.txt
 
 **Sumit Mallick**
 
-- GitHub: https://github.com/Sumit6342
-- LinkedIn: *(linkedin.com/in/sumit-mallick-ab96ab253/)*
+- 💼 GitHub: https://github.com/Sumit6342
+- 🔗 LinkedIn: *(linkedin.com/in/sumit-mallick-ab96ab253/)*
+- 📧 Email: *(sumit1610mallick@gmail.com)*
+
 
 ## ⭐ Support
 
