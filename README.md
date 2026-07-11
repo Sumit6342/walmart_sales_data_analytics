@@ -156,7 +156,24 @@ SELECT
     FROM walmart
 GROUP BY branch,category
 ORDER BY branch , total_profit DESC;
-```    
+```
+## 📊 Interactive Dashboard
+
+The dashboard was built in Tableau to provide interactive business insights into Walmart sales performance.
+
+### Features
+
+- KPI Cards (Total Sales, Orders, Rating, Profit Margin)
+- Monthly Sales Trend
+- Sales by Category
+- Top 5 Branches by Sales
+- Top 5 Cities by Sales
+- Payment Method Distribution
+- Interactive Filters (Month, Category, Payment Method)
+
+### Dashboard Preview
+
+![Dashboard](Images/dashboard.png)
 
    - **Documentation**: Keep clear notes of each query's objective, approach, and results.
 
