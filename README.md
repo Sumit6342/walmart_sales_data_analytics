@@ -23,7 +23,7 @@
 - [📁 Dataset](#-dataset)
 - [🔄 Project Workflow](#-project-workflow)
 - [📂 Project Structure](#-project-structure)
-- [📓 Python Notebook](#-python-notebook)
+- [Python Notebook](#python-notebook)
 - [🗄 SQL Queries Used for Dashboard](#-sql-queries-used-for-dashboard)
 - [📊 Additional Business Analysis Queries](#-additional-business-analysis-queries)
 - [🚀 Dashboard Features](#-dashboard-features)
@@ -144,7 +144,7 @@ walmart_sales_data_analytics/
 ├── LICENSE
 └── .gitignore
 
-## 📓 Python Notebook
+## Python Notebook
 
 The notebook includes:
 
