@@ -23,17 +23,23 @@
 - [🚀 Future Improvements](#-future-improvements)
 - [👨‍💻 Author](#-author)
 
+## 🌐 Live Dashboard
+
+👉 **View Interactive Dashboard**
+
+https://public.tableau.com/views/Walmart_Sales_Intelligence_Dashboard/WalmartSalesIntelligenceDashboard
+
+
 ## 📌 Project Overview
 
 This project is an end-to-end retail sales analytics solution built using **Python, MySQL, and Tableau**. It analyzes Walmart sales data to uncover business insights through data cleaning, SQL-based analysis, and an interactive dashboard.
 
 The project focuses on identifying sales trends, customer behavior, payment preferences, product performance, and branch-wise sales to support data-driven business decisions.
 
-## 🌐 Live Dashboard
+## 📷 Dashboard Preview
 
-👉 **View Interactive Dashboard**
+![Dashboard](dashboard/dashboard.png)
 
-https://public.tableau.com/views/Walmart_Sales_Intelligence_Dashboard/WalmartSalesIntelligenceDashboard
 
 ## ⭐ Project Highlights
 
