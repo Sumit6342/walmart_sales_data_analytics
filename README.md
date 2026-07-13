@@ -145,8 +145,8 @@ walmart_sales_data_analytics/
 └── .gitignore
 
 <a id="python-notebook"></a>
-
 ## Python Notebook
+
 The notebook includes:
 
 - Data Cleaning
