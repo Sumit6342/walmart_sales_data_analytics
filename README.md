@@ -19,7 +19,7 @@
 - [📖 Project Overview](#-project-overview)
 - [📊 Dashboard Preview](#-dashboard-preview)
 - [⭐ Project Highlights](#-project-highlights)
-- [🛠️ Tech Stack](#️-tech-stack)
+- [🛠 Tech Stack](#️-tech-stack)
 - [📁 Dataset](#-dataset)
 - [🔄 Project Workflow](#-project-workflow)
 - [📂 Project Structure](#-project-structure)
