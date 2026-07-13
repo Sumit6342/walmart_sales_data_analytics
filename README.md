@@ -29,7 +29,7 @@
 - [🚀 Dashboard Features](#-dashboard-features)
 - [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
-- [⚙️ Installation & Usage](#-installation-&-usage)
+- [⚙️ Installation and Usage](#-installation-and-usage)
 - [👨‍💻 Author](#-author)
 
 ## 🌐 Live Dashboard
@@ -442,7 +442,7 @@ This dashboard enables stakeholders to monitor sales performance and make data-d
 - 🚀 Supports faster decision-making with a centralized executive dashboard.
 
 
-## ⚙️ Installation & Usage
+## ⚙️ Installation and Usage
 
 ### 1. Clone the repository
 
