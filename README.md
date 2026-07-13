@@ -29,7 +29,7 @@
 - [🚀 Dashboard Features](#-dashboard-features)
 - [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
-- [⚙️ Installation & Usage](#-installation--usage)
+- [⚙️ Installation & Usage](#-installation-&-usage)
 - [👨‍💻 Author](#-author)
 
 ## 🌐 Live Dashboard
