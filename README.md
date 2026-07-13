@@ -19,17 +19,18 @@
 - [📖 Project Overview](#-project-overview)
 - [📊 Dashboard Preview](#-dashboard-preview)
 - [⭐ Project Highlights](#-project-highlights)
-- [🛠 Tech Stack](#️-tech-stack)
+- [🛠 Tech Stack](#-tech-stack)
 - [📁 Dataset](#-dataset)
 - [🔄 Project Workflow](#-project-workflow)
 - [📂 Project Structure](#-project-structure)
-- [🐍 Python Notebook](#-python-notebook)
-- [🗄️ SQL Business Analysis](#️-sql-business-analysis)
+- [📒 Python Notebook](#-python-notebook)
+- [SQL Analysis](#-sql-analysis)
+- [🗄 SQL Queries Used for Dashboard](#-sql-queries-used-for-dashboard)
+- [📊 Additional Business Analysis Queries](#-additional-business-analysis-queries)
 - [🚀 Dashboard Features](#-dashboard-features)
 - [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
-- [Key Business Benefits](#-key-business-benefits)
-- [⚙️ Installation & Usage](#️-installation-&-usage)
+- [⚙️ Installation & Usage](#-installation-&-usage)
 - [👨‍💻 Author](#-author)
 
 ## 🌐 Live Dashboard
@@ -154,9 +155,9 @@ The notebook includes:
 - Dataset Preparation for SQL
 
 ```
-### SQL Analysis: Complex Queries and Business Problem Solving
+## SQL Analysis: Complex Queries and Business Problem Solving
 
-🗄 SQL Queries Used for Dashboard:
+### 🗄 SQL Queries Used for Dashboard:
 
     -- 💰 1. Total Sales KPI
 ```sql
@@ -231,7 +232,7 @@ ORDER BY MIN(STR_TO_DATE(date,'%d/%m/%y'));
         GROUP BY payment_method
         ORDER BY total_sales DESC;
  ```
-📊 Additional Business Analysis Queries
+### 📊 Additional Business Analysis Queries
 The following SQL queries were performed for additional business analysis and exploration.
 
     -- 10. Find different payment method and number of transactions, numberof qty sold?
