@@ -1,12 +1,17 @@
-# 🛒 Walmart Sales Data Analytics
+# 📊 Walmart Sales Intelligence Dashboard
 
-> **End-to-End Retail Sales Analysis using SQL, Python (Pandas & NumPy), and Tableau**
+> End-to-End Retail Sales Analytics Project using **Excel, Python, MySQL, and Tableau** to transform raw Walmart sales data into actionable business insights.
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+
 ![MySQL](https://img.shields.io/badge/MySQL-Database-orange?logo=mysql)
-![Tableau](https://img.shields.io/badge/Tableau-Dashboard-blue?logo=tableau)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas)
-![NumPy](https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy)
+
+![Tableau](https://img.shields.io/badge/Tableau-Public-E97627?logo=tableau)
+
+![Excel](https://img.shields.io/badge/Excel-Data%20Cleaning-217346?logo=microsoftexcel)
+
+![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black?logo=github)
+
 
 ## 📑 Table of Contents
 
@@ -19,50 +24,56 @@
 - [🗄️ SQL Business Analysis](#️-sql-business-analysis)
 - [📈 Dashboard Features](#-dashboard-features)
 - [💡 Key Insights](#-key-insights)
+- - [📈 Business Impact](#-business-impact)
 - [⚙️ Installation](#️-installation)
 - [🚀 Future Improvements](#-future-improvements)
 - [👨‍💻 Author](#-author)
 
 ## 🌐 Live Dashboard
 
-👉 **View Interactive Dashboard**
+🔗 **Interactive Tableau Public Dashboard**
 
 https://public.tableau.com/views/Walmart_Sales_Intelligence_Dashboard/WalmartSalesIntelligenceDashboard
 
 
 ## 📌 Project Overview
 
-This project is an end-to-end retail sales analytics solution built using **Python, MySQL, and Tableau**. It analyzes Walmart sales data to uncover business insights through data cleaning, SQL-based analysis, and an interactive dashboard.
+The Walmart Sales Intelligence Dashboard is an end-to-end retail analytics project that transforms raw Walmart sales data into actionable business insights.
 
-The project focuses on identifying sales trends, customer behavior, payment preferences, product performance, and branch-wise sales to support data-driven business decisions.
+The project follows a complete analytics workflow, including data cleaning in Excel and Python, business analysis using MySQL, and interactive dashboard development in Tableau.
+
+The dashboard enables users to monitor key performance indicators (KPIs), analyze monthly sales trends, evaluate product category performance, compare branch and city-wise sales, and understand customer payment preferences through interactive visualizations.
+
 
 ## 📷 Dashboard Preview
 
 ![Dashboard](dashboard/dashboard.png)
+> Interactive Tableau dashboard showcasing KPIs, sales trends, category performance, branch analysis, city-wise sales, and payment method distribution.
 
 
 ## ⭐ Project Highlights
 
-- ✅ End-to-End Walmart Sales Analytics Project
-- ✅ Data Cleaning & Feature Engineering using Python
+- ✅ End-to-End Retail Sales Analytics Project
+- ✅ Data Cleaning using Excel & Python
 - ✅ Business Analysis using MySQL
 - ✅ Interactive Tableau Dashboard
-- ✅ 15+ SQL Business Problems Solved
-- ✅ Retail Sales Performance Analysis
-- ✅ KPI Dashboard with Interactive Filters
+- ✅ KPI-Based Business Intelligence Dashboard
+- ✅ Business SQL Analysis
+- ✅ Interactive Filters & Dynamic Visualizations
 - ✅ Recruiter Portfolio Ready Project
-
+  
   
 ## 🛠 Tech Stack
 
 | Category | Tools |
 |----------|-------|
-| Programming | Python |
+|Programming | Python (Pandas, NumPy)
 | Data Analysis | Pandas, NumPy |
 | Database | MySQL |
 | Visualization | Tableau |
 | Version Control | Git & GitHub |
 | Notebook | Jupyter Notebook |
+
 
 ## 📁 Dataset
 
@@ -72,6 +83,7 @@ Files included:
 
 - Walmart.csv (Raw Dataset)
 - walmart_clean_data.csv (Cleaned Dataset)
+
 
 ## 🔄 Project Workflow
 
@@ -140,9 +152,86 @@ The notebook includes:
 
 ```
 ### SQL Analysis: Complex Queries and Business Problem Solving
-   - **Business Problem-Solving**: Write and execute complex SQL queries to answer critical business questions, such as:
 
-    - Q.1 Find different payment method and number of transactions, numberof qty sold?
+🗄 SQL Queries Used for Dashboard:
+
+    -- 💰 1. Total Sales KPI
+```sql
+    SELECT 
+        ROUND(sum(total), 0) As Total_Sales
+        FROM walmart;
+```
+
+    -- 🛒 2. Total Orders KPI
+```sql
+   SELECT 
+      COUNT(invoice_id) As Total_Orders
+      FROM walmart;
+```
+	-- ⭐ 3. Average Customer Rating KPI
+```sql
+ SELECT 
+      ROUND(AVG(rating), 2) As Average_rating
+      FROM walmart;
+```
+    -- 📈 4. Average Profit Margin KPI
+```sql
+  SELECT 
+      ROUND(AVG(profit_margin) * 100, 2) As Average_profit_margin_percentage
+      FROM walmart;
+```
+    -- 📅 5. Monthly Sales Trend
+```sql
+  SELECT
+    MONTHNAME(STR_TO_DATE(date,'%d/%m/%y')) AS month,
+    ROUND(SUM(total), 0) AS total_sales
+FROM walmart
+GROUP BY month
+ORDER BY MIN(STR_TO_DATE(date,'%d/%m/%y'));
+```
+    -- 🛍️ 6. Sales by Product Category
+```sql
+  SELECT
+      category,
+      ROUND(SUM(total), 0) As total_sales
+      FROM walmart
+  GROUP BY category
+  ORDER BY total_sales DESC;
+```
+    -- 🏪 7. Top 5 Branches by Sales
+```sql
+    SELECT 
+        branch,
+        ROUND(SUM(total), 0) As total_sales
+        FROM walmart
+	GROUP BY branch
+    ORDER BY total_sales DESC
+    LIMIT 5;
+```
+    -- 🌍 8. Top 5 Cities by Sales
+```sql
+   SELECT
+        city,
+        ROUND(SUM(total), 0) As total_sales
+        FROM walmart
+        GROUP BY city
+        ORDER BY total_sales DESC
+        LIMIT 5;
+ ```
+    -- 💳 9. Payment Method Distribution
+```sql
+   SELECT
+        payment_method,
+        ROUND(SUM(total), 0) As total_sales,
+        ROUND(SUM(total) * 100 / (SELECT SUM(total) FROM walmart), 0) As sales_percentage
+        FROM walmart
+        GROUP BY payment_method
+        ORDER BY total_sales DESC;
+ ```
+📊 Additional Business Analysis Queries
+The following SQL queries were performed for additional business analysis and exploration.
+
+    -- 10. Find different payment method and number of transactions, numberof qty sold?
 ```sql
 SELECT DISTINCT payment_method as payment_method,
    COUNT(*) as no_transactions,
@@ -151,7 +240,7 @@ FROM walmart
 GROUP BY payment_method
 ORDER BY payment_method;
 ```
-    - Q.2 Identify the highest-rated category in each branch, displaying the branch,category,AVG_rating
+    -- 11. Identify the highest-rated category in each branch, displaying the branch,category,AVG_rating
 ```sql     
 SELECT *
 FROM 
@@ -165,7 +254,7 @@ GROUP BY branch,category
 ) as t1
 WHERE ranks = 1;
 ```
-	 - Q.3 Revenue trends across branches and categories.
+	 -- 12. Revenue trends across branches and categories.
 ```sql
 SELECT 
      category,
@@ -177,7 +266,7 @@ SELECT
 GROUP BY category,city;
 ```
 
-     - Q.4 Identifying best-selling product categories.
+     -- 13. Identifying best-selling product categories.
 ```sql
 SELECT
      category,
@@ -186,7 +275,7 @@ SELECT
 GROUP BY category
 ORDER BY total_profit DESC;
 ```
-     - Q.5 Sales performance by time, city, and payment method.
+     -- 14. Sales performance by time, city, and payment method.
 ```sql
 SELECT 
     city,
@@ -202,7 +291,7 @@ FROM walmart
 GROUP BY city, payment_method, day_time
 ORDER BY city, total_sales DESC;
 ```
-   - Q.6 Analyzing peak sales periods and customer buying patterns.
+    -- 15. Analyzing peak sales periods and customer buying patterns.
 	 **a) Peak sales days**
 ```sql
 SELECT 
@@ -254,7 +343,7 @@ GROUP BY category
 ORDER BY avg_rating DESC;
 ```
 
-     - Q.7 Profit margin analysis by branch and category.
+     -- 16. Profit margin analysis by branch and category.
 ```sql
 SELECT
     branch,
@@ -266,7 +355,7 @@ SELECT
 GROUP BY branch,category
 ORDER BY branch , total_profit DESC;
 ```
-    - Q.8 Identify 5 branches with highest decrease ratio in revenue comapare to last year (current year 2023 and last year 2022)
+    -- 17. Identify 5 branches with highest decrease ratio in revenue comapare to last year (current year 2023 and last year 2022)
 ```sql
 -- 2022 sales
 WITH revenue_2022
@@ -304,85 +393,103 @@ ORDER BY revenue_dec_ratio DESC
 LIMIT 5;
 ```
 
-## 📈 Dashboard Features
+## 🚀 Dashboard Features
 
-The Tableau dashboard provides an interactive view of Walmart sales performance with the following features:
+✔ Interactive KPI Cards for quick business performance monitoring
 
-- 📊 KPI Cards
-  - Total Sales
-  - Total Orders
-  - Average Customer Rating
-  - Average Profit Margin
+✔ Monthly Sales Trend visualization to identify seasonal patterns
 
-- 📈 Monthly Sales Trend
+✔ Category-wise Sales Analysis for product performance comparison
 
-- 🛍 Sales by Product Category
+✔ Top 5 Branches by Sales to identify high-performing stores
 
-- 🏪 Top 5 Branches by Sales
+✔ Top 5 Cities by Sales to analyze regional business performance
 
-- 🌍 Top 5 Cities by Sales
+✔ Payment Method Distribution to understand customer purchasing preferences
 
-- 💳 Payment Method Distribution
+✔ Dynamic Filters (Category, Month, Payment Method) for customized business analysis
 
-- 🎛 Interactive Filters
-  - Month
-  - Category
-  - Payment Method
+✔ Clean, responsive, and executive-level dashboard design suitable for business reporting
 
-## 💡 Key Insights
+	
+## 💡 Business Insights
 
-- 💰 The dashboard recorded **₹1,209,726** in total sales from **9,969 customer orders**.
-- ⭐ The overall customer satisfaction remained strong with an **average rating of 5.83**.
-- 📈 Sales increased significantly during **November and December**, indicating a strong year-end sales trend.
-- 🛍️ **Fashion Accessories** (₹489,481) and **Home & Lifestyle** (₹489,250) were the highest revenue-generating product categories.
-- 💳 **Credit Card** was the most preferred payment method (40%), followed by **E-wallet** (38%) and **Cash** (22%).
-- 🏪 **WALM009** was the highest-performing branch with **₹25,688** in sales.
-- 🌍 **Weslaco** generated the highest city-wise sales, followed by **Waxahachie** and **Plano**.
-- 📊 The dashboard provides interactive filters for **Category**, **Month**, and **Payment Method**, enabling detailed business analysis.
+- Identified seasonal sales peaks to support inventory planning and demand forecasting.
+- Recognized top-performing product categories contributing the highest revenue.
+- Highlighted high-performing branches and cities for regional performance analysis.
+- Analyzed customer payment preferences to understand purchasing behavior.
+- Monitored overall business health using interactive KPIs for Sales, Orders, Rating, and Profit Margin.
+- Enabled dynamic exploration of business performance using Category, Month, and Payment Method filters.
 
-  ## 📈 Business Impact
+  
+ ## 🎯 Business Impact
 
-This project demonstrates how data analytics can support business decision-making by:
+This dashboard enables stakeholders to monitor sales performance and make data-driven business decisions through an interactive and user-friendly interface.
 
-- Monitoring overall sales performance across branches.
-- Identifying top-performing products and categories.
-- Understanding customer payment preferences.
-- Tracking monthly sales trends.
-- Comparing branch and city-wise performance.
-- Supporting data-driven business decisions through interactive visualizations.
+### Key Business Benefits
 
-## ⚙️ Installation
+- 📈 Tracks overall business performance using real-time KPIs.
+- 🛍 Identifies top-performing product categories for better inventory planning.
+- 🏪 Highlights the highest revenue-generating branches and cities.
+- 💳 Analyzes customer payment preferences to support business strategy.
+- 📅 Detects monthly sales trends and seasonal demand patterns.
+- 📊 Helps management evaluate profitability using the Average Profit Margin metric.
+- 🎛 Allows dynamic filtering by Category, Month, and Payment Method for deeper analysis.
+- 🚀 Supports faster decision-making with a centralized executive dashboard.
 
-### Clone the repository
+
+## ⚙️ Installation & Usage
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Sumit6342/walmart_sales_data_analytics.git
-cd walmart_sales_data_analytics
 ```
 
-### Install dependencies
+### 2. Open the project
 
-```bash
-pip install -r requirements.txt
-```
+- Open the SQL scripts in **MySQL Workbench** (or any MySQL client).
+- Load the Walmart dataset into your MySQL database.
+- Execute the SQL queries to generate the required analysis.
+- Open the Tableau workbook (.twb/.twbx) using **Tableau Public** or **Tableau Desktop**.
+- Refresh the data source if required.
 
-### Run the project
+### 3. Explore the Dashboard
 
-1. Open `Notebook/project.ipynb` for data cleaning and preprocessing.
-2. Import `Dataset/walmart_clean_data.csv` into MySQL.
-3. Execute queries from `SQL/walmart_sales_queries.sql`.
-4. Open the Tableau dashboard (`.twbx`) once available to explore interactive visualizations.
-```
+Use the interactive filters to analyze sales by:
+
+- 📦 Product Category
+- 📅 Month
+- 💳 Payment Method
+
+Interact with the charts to gain insights into:
+
+- Monthly Sales Trend
+- Sales by Category
+- Top 5 Branches by Sales
+- Top 5 Cities by Sales
+- Payment Method Distribution
+- Business KPIs (Sales, Orders, Rating, Profit Margin)
+
+  ## 🌐 Live Dashboard
+
+View the interactive Tableau dashboard here:
+
+👉 https://public.tableau.com/views/Walmart_Sales_Intelligence_Dashboard/WalmartSalesIntelligenceDashboard
+
   
 ## 👨‍💻 Author
 
 **Sumit Mallick**
 
-- 💼 GitHub: https://github.com/Sumit6342
-- 🔗 LinkedIn: *(linkedin.com/in/sumit-mallick-ab96ab253/)*
-- 📧 Email: *(sumit1610mallick@gmail.com)*
+Aspiring Data Analyst with a passion for transforming raw data into actionable business insights through SQL, Python, Excel, and Tableau.
 
+### 📬 Connect with Me
 
-## ⭐ Support
+- 💼 LinkedIn: [https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME](https://www.linkedin.com/in/sumit-mallick-ab96ab253/)
+- 💻 GitHub: https://github.com/Sumit6342
+- 📧 Email: sumit1610mallick@gmail.com
 
-If you found this project useful, consider giving it a ⭐ on GitHub.
+---
+
+⭐ If you found this project helpful, consider giving this repository a **Star** on GitHub!
