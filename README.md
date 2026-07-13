@@ -30,8 +30,9 @@
 - [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
 - [⚙️ Installation and Usage](#-installation-and-usage)
-- [👨‍💻 Author](#-author)
+- [Author](#-author)
 
+  
 ## 🌐 Live Dashboard
 
 🔗 **Interactive Tableau Public Dashboard**
@@ -482,7 +483,7 @@ View the interactive Tableau dashboard here:
 👉 https://public.tableau.com/views/Walmart_Sales_Intelligence_Dashboard/WalmartSalesIntelligenceDashboard
 
   
-## 👨‍💻 Author
+## Author
 
 **Sumit Mallick**
 
