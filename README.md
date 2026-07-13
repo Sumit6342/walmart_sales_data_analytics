@@ -145,8 +145,8 @@ walmart_sales_data_analytics/
 ├── LICENSE
 └── .gitignore
 
-## 📒 Python Notebook
-
+**### 📒 Python Notebook
+**
 The notebook includes:
 
 - Data Cleaning
