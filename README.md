@@ -15,18 +15,21 @@
 
 ## 📑 Table of Contents
 
+- [🌐 Live Dashboard](#-live-dashboard)
 - [📖 Project Overview](#-project-overview)
 - [📊 Dashboard Preview](#-dashboard-preview)
+- [⭐ Project Highlights](#-project-highlights)
 - [🛠️ Tech Stack](#️-tech-stack)
+- [📁 Dataset](#-dataset)
 - [🔄 Project Workflow](#-project-workflow)
 - [📂 Project Structure](#-project-structure)
 - [🐍 Python Notebook](#-python-notebook)
 - [🗄️ SQL Business Analysis](#️-sql-business-analysis)
-- [📈 Dashboard Features](#-dashboard-features)
-- [💡 Key Insights](#-key-insights)
+- [🚀 Dashboard Features](#-dashboard-features)
+- [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
-- [⚙️ Installation](#️-installation)
-- [🚀 Future Improvements](#-future-improvements)
+- [Key Business Benefits](#-key-business-benefits)
+- [⚙️ Installation & Usage](#️-installation-&-usage)
 - [👨‍💻 Author](#-author)
 
 ## 🌐 Live Dashboard
