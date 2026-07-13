@@ -475,7 +475,7 @@ Interact with the charts to gain insights into:
 - Payment Method Distribution
 - Business KPIs (Sales, Orders, Rating, Profit Margin)
 
-  ## 🌐 Live Dashboard
+  ### 4. 🌐 Live Dashboard
 
 View the interactive Tableau dashboard here:
 
