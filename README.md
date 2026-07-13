@@ -47,7 +47,7 @@ The dashboard enables users to monitor key performance indicators (KPIs), analyz
 
 ## 📷 Dashboard Preview
 
-![Dashboard](dashboard/dashboard.png)
+![Dashboard](Dashboard/dashboard.png)
 > Interactive Tableau dashboard showcasing KPIs, sales trends, category performance, branch analysis, city-wise sales, and payment method distribution.
 
 
