@@ -24,7 +24,7 @@
 - [🗄️ SQL Business Analysis](#️-sql-business-analysis)
 - [📈 Dashboard Features](#-dashboard-features)
 - [💡 Key Insights](#-key-insights)
-- - [📈 Business Impact](#-business-impact)
+- [🎯 Business Impact](#-business-impact)
 - [⚙️ Installation](#️-installation)
 - [🚀 Future Improvements](#-future-improvements)
 - [👨‍💻 Author](#-author)
