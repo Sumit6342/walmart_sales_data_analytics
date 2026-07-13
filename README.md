@@ -30,7 +30,7 @@
 - [💡 Business Insights](#-business-insights)
 - [🎯 Business Impact](#-business-impact)
 - [⚙️ Installation & Usage](#-installation--usage)
-- [👨‍💻 Author](#-author)
+- 👨‍💻 [Author](#-author)
 
 ## 🌐 Live Dashboard
 
